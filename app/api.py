@@ -1,11 +1,13 @@
 from fastapi import FastAPI
+from routers import metrics
 
 #creating object of FastAPI to create a api
 app = FastAPI(
     title="Internal Devops Utilities API",
     description="This is the Simple API Created using FastAPI",
     version="1.0.0",
-    docs_url="/docs"
+    docs_url="/docs",
+    redoc_url="/redoc"
 )
 
 #creating Route /
@@ -19,6 +21,6 @@ def hello():
         "role":"Devops guy"
             }
 
-
+app.include_router(metrics.router)
 
 
