@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from routers import metrics
+from routers import metrics,awsmetrics
 
 #creating object of FastAPI to create a api
 app = FastAPI(
@@ -22,5 +22,6 @@ def hello():
             }
 
 app.include_router(metrics.router)
+app.include_router(awsmetrics.router,prefix="/aws")
 
 
