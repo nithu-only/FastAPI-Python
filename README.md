@@ -18,6 +18,9 @@ $ ./env/Scripts/activate.bat
 # for ubuntu or mac
 $ source ./env/bin/activate
 ```
+## To manage AWS Services You need to install AWS Cli & configure credentials
+[Click to see documentation](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+
 ## Install Requirements
 ```python
 $ pip install -r requirements.txt
